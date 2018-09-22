@@ -4,7 +4,7 @@
 #
 Name     : compat-enchant-soname1
 Version  : 1.6.1
-Release  : 2
+Release  : 3
 URL      : https://github.com/AbiWord/enchant/releases/download/enchant-1-6-1/enchant-1.6.1.tar.gz
 Source0  : https://github.com/AbiWord/enchant/releases/download/enchant-1-6-1/enchant-1.6.1.tar.gz
 Summary  : An Enchanting Spell Checking Library
@@ -90,7 +90,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1537647056
+export SOURCE_DATE_EPOCH=1537647506
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -102,7 +102,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1537647056
+export SOURCE_DATE_EPOCH=1537647506
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/compat-enchant-soname1
 cp COPYING.LIB %{buildroot}/usr/share/doc/compat-enchant-soname1/COPYING.LIB
@@ -118,7 +118,7 @@ cp COPYING.LIB %{buildroot}/usr/share/doc/compat-enchant-soname1/COPYING.LIB
 
 %files data
 %defattr(-,root,root,-)
-/usr/share/enchant/enchant.ordering
+%exclude /usr/share/enchant/enchant.ordering
 
 %files dev
 %defattr(-,root,root,-)
