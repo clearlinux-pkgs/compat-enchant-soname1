@@ -4,7 +4,7 @@
 #
 Name     : compat-enchant-soname1
 Version  : 1.6.1
-Release  : 1
+Release  : 2
 URL      : https://github.com/AbiWord/enchant/releases/download/enchant-1-6-1/enchant-1.6.1.tar.gz
 Source0  : https://github.com/AbiWord/enchant/releases/download/enchant-1-6-1/enchant-1.6.1.tar.gz
 Summary  : An Enchanting Spell Checking Library
@@ -90,7 +90,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1537646777
+export SOURCE_DATE_EPOCH=1537647056
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -102,7 +102,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1537646777
+export SOURCE_DATE_EPOCH=1537647056
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/compat-enchant-soname1
 cp COPYING.LIB %{buildroot}/usr/share/doc/compat-enchant-soname1/COPYING.LIB
@@ -113,34 +113,34 @@ cp COPYING.LIB %{buildroot}/usr/share/doc/compat-enchant-soname1/COPYING.LIB
 
 %files bin
 %defattr(-,root,root,-)
-%exclude /usr/bin/enchant
-%exclude /usr/bin/enchant-lsmod
+/usr/bin/enchant
+/usr/bin/enchant-lsmod
 
 %files data
 %defattr(-,root,root,-)
-%exclude /usr/share/enchant/enchant.ordering
+/usr/share/enchant/enchant.ordering
 
 %files dev
 %defattr(-,root,root,-)
-%exclude /usr/include/enchant/enchant++.h
-%exclude /usr/include/enchant/enchant-provider.h
-%exclude /usr/include/enchant/enchant.h
-%exclude /usr/lib64/libenchant.so
-%exclude /usr/lib64/pkgconfig/enchant.pc
+/usr/include/enchant/enchant++.h
+/usr/include/enchant/enchant-provider.h
+/usr/include/enchant/enchant.h
+/usr/lib64/libenchant.so
+/usr/lib64/pkgconfig/enchant.pc
 
 %files lib
 %defattr(-,root,root,-)
-%exclude /usr/lib64/enchant/libenchant_aspell.so
-%exclude /usr/lib64/enchant/libenchant_ispell.so
-%exclude /usr/lib64/enchant/libenchant_myspell.so
-%exclude /usr/lib64/enchant/libenchant_zemberek.so
+/usr/lib64/enchant/libenchant_aspell.so
+/usr/lib64/enchant/libenchant_ispell.so
+/usr/lib64/enchant/libenchant_myspell.so
+/usr/lib64/enchant/libenchant_zemberek.so
 /usr/lib64/libenchant.so.1
 /usr/lib64/libenchant.so.1.6.1
 
 %files license
 %defattr(-,root,root,-)
-%exclude /usr/share/doc/compat-enchant-soname1/COPYING.LIB
+/usr/share/doc/compat-enchant-soname1/COPYING.LIB
 
 %files man
 %defattr(-,root,root,-)
-%exclude /usr/share/man/man1/enchant.1
+/usr/share/man/man1/enchant.1
