@@ -1,0 +1,4 @@
+Configure miss: OS X
+Configure miss: voikko_init in -lvoikko
+Configure miss: USPELL
+Configure miss: hspell_get_dictionary_path in -lhspell
