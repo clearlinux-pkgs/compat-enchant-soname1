@@ -4,7 +4,7 @@
 #
 Name     : compat-enchant-soname1
 Version  : 1.6.1
-Release  : 5
+Release  : 6
 URL      : https://github.com/AbiWord/enchant/releases/download/enchant-1-6-1/enchant-1.6.1.tar.gz
 Source0  : https://github.com/AbiWord/enchant/releases/download/enchant-1-6-1/enchant-1.6.1.tar.gz
 Summary  : An Enchanting Spell Checking Library
